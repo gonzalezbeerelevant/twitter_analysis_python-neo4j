@@ -1,0 +1,16 @@
+**1 - Importando dados de uma base no github**
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/matgonz/twitter_analysis_python-neo4j/main/data/tweets_violencia_infantil.csv' AS row
+WITH row.author as Author, row.screen_name as ScreenName
+RETURN Author, ScreenName
+LIMIT 10
+
+**2 - Criando constraints para evitar dados duplicados**
+CREATE CONSTRAINT ON (u:User) ASSERT u.username IS UNIQUE
+
+
+
+
+TODO:
+- Modelar dados do twitter (Desenho)
+- Conectar Neo4j Desktop com base sandbox
+- Desenvolver comandos para criar nós, labels e relacionamentos (Comece com relacionamentos simples)

@@ -1,0 +1,11 @@
+#https://virtualenv.pypa.io/en/latest/installation.html
+
+1 - Acesse a pasta do projeto
+2 - 
+	virtualenv --help
+	virtualenv vneo4j #Criar ambiente virtual
+	.\vneo4j\Scripts\activate #Ativando ambiente virtual
+	deactivate #Desativando ambiente virtual
+
+pip freeze > requirements.txt #Gerando arquivos com referências
+pip install -r requirements.txt #Instalando referências
